@@ -1,16 +1,9 @@
 // 1.05 (*) Reverse a list.
-let list5: Array<number | string | boolean> = [1, 2, "hsbsd", 4, true];
+const list5: Array<number | string | boolean> = [1, 2, "hsbsd", 4, true, 5, 4];
 
-function reverseList(input: any[]) {
-  for (let i = 0; input[i] != undefined; i++) {
-    if (input[i + 1] === undefined) {
-      let listLength = i;
-      let reversedList: Array<number | string | boolean> = [listLength];
-      console.log("Reverse List");
-      for (listLength; listLength >= 0; listLength--) {
-        console.log(input[listLength]);
-      }
-    }
-  }
+//input a list in the function and it will return a reverse list
+export function reverseList(input: any[]) {
+  let reverseList: Array<number | string | boolean> = [...input];
+  reverseList = reverseList.reverse();
+  return reverseList;
 }
-reverseList(list5);
