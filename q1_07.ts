@@ -16,4 +16,4 @@ export function flatten(input: Array<any>) {
     );
   }, []);
 }
-console.log(flatten(nestedList));
+// console.log(flatten(nestedList));
