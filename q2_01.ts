@@ -1,6 +1,6 @@
 // 2.01 (**) Determine whether a given integer number is prime.
 
-function isPrime(num: number) {
+export function isPrime(num: number) {
   if (num === 2) {
     return true;
   } else if (num > 1) {
