@@ -17,4 +17,4 @@ export function isPrime(num: number) {
     return false;
   }
 }
-console.log(isPrime(78));
+// console.log(isPrime(78));
