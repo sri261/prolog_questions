@@ -10,4 +10,4 @@ function rotateListNplacesLeft(input: Array<any>, numOfPlaces: number) {
   ];
 }
 
-console.log(rotateListNplacesLeft(list19, 4));
+console.log(rotateListNplacesLeft(list19, 2));

@@ -24,6 +24,7 @@ function goldbachComposition(int1: number, int2: number) {
     return getGoldbachPrimeNumbers(e);
   });
 }
+
 // console.log(checkIfEven(17));
 // console.log(getEvenNumbers(10, 20));
 console.log(goldbachComposition(20, 25));

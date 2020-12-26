@@ -24,5 +24,5 @@ function splitList2(
   return sliceFromList(list17, 0, lengthOfFirstPart);
 }
 
-// console.log(splitList(list17, 5));
-// console.log(splitList2(list17, 5));
+console.log(splitList(list17, 5));
+console.log(splitList2(list17, 5));
