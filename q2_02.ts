@@ -13,4 +13,4 @@ function primeFactors(input: number) {
   }
   return primeFactorNumbers;
 }
-console.log(primeFactors(150));
+console.log(primeFactors(20));
