@@ -21,12 +21,17 @@ const List9: Array<any> = [
   "e",
   "e",
 ];
-function consecutiveDuplicatesInSublists(input: Array<any>) {
-  let temp: Array<any> = [];
-  input.filter((e, index) => {
-    input.indexOf(e) == index;
-    temp.push(e);
-  });
-  return temp;
-}
-console.log(consecutiveDuplicatesInSublists(List9));
+// function consecutiveDuplicates(input: Array<any>) {
+//   let result: Array<any> = [];
+//   let counter: number = 1;
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] === input[i + 1]) {
+//       counter++;
+//     } else {
+//       result.push([input[i], counter]);
+//       counter = 1;
+//     }
+//   }
+//   return result;
+// }
+// console.log(consecutiveDuplicates(List9));
