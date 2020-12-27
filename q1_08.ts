@@ -23,23 +23,10 @@ const List8: Array<any> = [
   "e",
 ];
 
-export const eliminateConsecutiveDuplicates = (
-  arr,
-  len = 0,
-  canDelete = false
-) => {
-  if (len < arr.length) {
-    if (canDelete) {
-      arr.splice(len, 1);
-      len--;
-    }
-    return eliminateConsecutiveDuplicates(
-      arr,
-      len + 1,
-      arr[len] === arr[len + 1]
-    );
-  }
-  return;
-};
-eliminateConsecutiveDuplicates(List8);
-console.log(List8);
+function eliminateConsecutiveDuplicates(input: Array<any>) {
+  return input.filter((e, index) => {
+    return input.indexOf(e) == index ? e : null;
+  });
+}
+
+console.log(eliminateConsecutiveDuplicates(List8));
