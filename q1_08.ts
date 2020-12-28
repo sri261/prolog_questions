@@ -25,7 +25,10 @@ const List8: Array<any> = [
 
 function eliminateConsecutiveDuplicates(input: Array<any>) {
   return input.filter((e, index) => {
-    return input.indexOf(e) == index ? e : null;
+    // return input.indexOf(e) == index ? e : null;
+    if (input.indexOf(e) === index) {
+      return e;
+    }
   });
 }
 
