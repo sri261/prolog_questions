@@ -5,15 +5,20 @@ export function sliceFromList(
   firstIndex: number,
   secondIndex: number
 ) {
+  const error = new Error("errors");
   if (firstIndex > secondIndex) {
-    return "firstIndex should be smaller than second Index";
+    throw new Error("firstIndex should be smaller than second Index");
   } else if (secondIndex > input.length) {
-    return "Do not enter second number greater than lenght of input list";
+    throw new Error(
+      "Do not enter second number greater than lenght of input list"
+    );
   } else if (firstIndex >= input.length) {
-    return "enter first index atleast one count smaller than input list";
+    throw new Error(
+      "enter first index atleast one count smaller than input list"
+    );
   } else {
     return input.slice(firstIndex, secondIndex);
   }
 }
 
-// console.log(sliceFromList(list18, 3, 4));
+// console.log(sliceFromList(list18, 3, 6));
