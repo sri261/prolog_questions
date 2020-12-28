@@ -4,10 +4,10 @@ import { flatten } from "./q1_07";
 const list19: Array<any> = ["a", 2, 3, "d", true, "df", 1];
 
 function rotateListNplacesLeft(input: Array<any>, numOfPlaces: number) {
-  return [
-    ...input.slice(numOfPlaces + 1, input.length),
-    ...input.slice(0, numOfPlaces),
-  ];
+  const temp: Array<any> = [];
+  temp[0] = splitList(input, numOfPlaces)[1];
+  temp[1] = splitList(input, numOfPlaces)[0];
+  return flatten(temp);
 }
 
-console.log(rotateListNplacesLeft(list19, 2));
+console.log(rotateListNplacesLeft(list19, 3));
