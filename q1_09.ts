@@ -21,17 +21,22 @@ const List9: Array<any> = [
   "e",
   "e",
 ];
-// function consecutiveDuplicates(input: Array<any>) {
-//   let result: Array<any> = [];
-//   let counter: number = 1;
-//   for (let i = 0; i < input.length; i++) {
-//     if (input[i] === input[i + 1]) {
-//       counter++;
-//     } else {
-//       result.push([input[i], counter]);
-//       counter = 1;
-//     }
-//   }
-//   return result;
-// }
-// console.log(consecutiveDuplicates(List9));
+function consecutiveDuplicates(input: Array<any>) {
+  let result: Array<any> = [];
+
+  let counter: number = 1;
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === input[i + 1]) {
+      counter++;
+    } else {
+      let temp: Array<any> = [];
+      for (let j = 0; j < counter; j++) {
+        temp.push(input[i]);
+      }
+      result.push(temp);
+      counter = 1;
+    }
+  }
+  return result;
+}
+console.log(consecutiveDuplicates(List9));
