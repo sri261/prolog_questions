@@ -2,6 +2,8 @@
 // Modify the result of problem 1.10 in such a way that if an element has no duplicates it
 // is simply copied into the result list.
 // Only elements with duplicates are transferred as [N,E] terms.
+
+import { lengthEncoding } from "./q1_10";
 const List11: Array<any> = [
   "a",
   "a",
@@ -20,18 +22,6 @@ const List11: Array<any> = [
 ];
 
 function modifiedLengthEncoding(input: Array<any>) {
-  let result: Array<any> = [];
-  let counter: number = 1;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === input[i + 1]) {
-      counter++;
-    } else if (counter == 1) {
-      result.push(input[i]);
-    } else {
-      result.push([input[i], counter]);
-      counter = 1;
-    }
-  }
-  return result;
+  return lengthEncoding(input).map((e) => (e[1] === 1 ? e[0] : e));
 }
 console.log(modifiedLengthEncoding(List11));
