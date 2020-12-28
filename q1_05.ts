@@ -6,4 +6,4 @@ export function reverseList(input: Array<any>) {
     return [c].concat(p);
   });
 }
-console.log(reverseList(list5));
+// console.log(reverseList(list5));

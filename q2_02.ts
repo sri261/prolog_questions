@@ -1,6 +1,6 @@
 // 2.02 (**) Determine the prime factors of a given positive integer.
 
-function primeFactors(input: number) {
+export function primeFactors(input: number) {
   let primeFactorNumbers: Array<number> = [];
   let divisor = 2;
   while (input > 2) {

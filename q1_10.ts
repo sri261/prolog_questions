@@ -16,7 +16,7 @@ const List10: Array<any> = [
   "e",
 ];
 
-function lengthEncoding(input: Array<any>) {
+export function lengthEncoding(input: Array<any>) {
   let result: Array<any> = [];
   let counter: number = 1;
   for (let i = 0; i < input.length; i++) {
@@ -29,4 +29,4 @@ function lengthEncoding(input: Array<any>) {
   }
   return result;
 }
-console.log(lengthEncoding(List10));
+// console.log(lengthEncoding(List10));

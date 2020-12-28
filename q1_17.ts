@@ -10,19 +10,18 @@ export function splitList(
   if (lengthOfFirstPart >= input.length) {
     return "Enter length of first part Smaller than input array length";
   } else {
-    let firstPart = input.slice(0, lengthOfFirstPart);
-    let secondPart = input.slice(lengthOfFirstPart);
-
+    let firstPart = input.slice(lengthOfFirstPart);
+    let secondPart = input.slice(0, lengthOfFirstPart);
     return [secondPart, firstPart];
   }
 }
 //Using splitFromList() from q1_18
-function splitList2(
+export function splitList2(
   input: Array<number | string | boolean>,
   lengthOfFirstPart: number
 ) {
   return sliceFromList(list17, 0, lengthOfFirstPart);
 }
 
-console.log(splitList(list17, 5));
-console.log(splitList2(list17, 5));
+// console.log(splitList(list17, 5));
+// console.log(splitList2(list17, 5));

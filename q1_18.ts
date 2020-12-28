@@ -5,7 +5,6 @@ export function sliceFromList(
   firstIndex: number,
   secondIndex: number
 ) {
-  const error = new Error("errors");
   if (firstIndex > secondIndex) {
     throw new Error("firstIndex should be smaller than second Index");
   } else if (secondIndex > input.length) {
