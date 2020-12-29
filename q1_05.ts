@@ -2,8 +2,8 @@
 const list5 = [1, 2, "hsbsd", 4, true, 5, 4];
 
 export function reverseList(input: Array<any>) {
-  return input.reduce((p, c) => {
-    return [c].concat(p);
+  return input.reduce((accu, currItem) => {
+    return [currItem].concat(accu);
   });
 }
 // console.log(reverseList(list5));
