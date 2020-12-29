@@ -1,4 +1,7 @@
 // 1.10 (*) Run-length encoding of a list.
+// ?- encode([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
+// X = [[4,a],[1,b],[2,c],[2,a],[1,d],[4,e]]
+import { consecutiveDuplicates } from "./q1_09";
 const List10: Array<any> = [
   "a",
   "a",
@@ -17,16 +20,8 @@ const List10: Array<any> = [
 ];
 
 export function lengthEncoding(input: Array<any>) {
-  let result: Array<any> = [];
-  let counter: number = 1;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === input[i + 1]) {
-      counter++;
-    } else {
-      result.push([input[i], counter]);
-      counter = 1;
-    }
-  }
-  return result;
+  return consecutiveDuplicates(input).map((e) => {
+    return [e.length, e[0]];
+  });
 }
-// console.log(lengthEncoding(List10));
+console.log(lengthEncoding(List10));
