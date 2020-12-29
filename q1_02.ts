@@ -10,12 +10,11 @@ let list2: Array<number | string | boolean> = [
   65,
   32,
   false,
+  "a",
 ];
+
 function lastButOneElement(input: any[]) {
-  for (let i = 0; input[i] != undefined; i++) {
-    if (input[i + 1] === undefined) {
-      console.log(input[i - 1]);
-    }
-  }
+  return input[input.length - 2];
 }
-lastButOneElement(list2);
+
+console.log(lastButOneElement(list2));
