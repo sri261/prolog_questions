@@ -6,9 +6,13 @@ import { checkIfCoprime } from "./q2_08";
 
 function eulersTotientFn(m: number) {
   let count: number = 0;
+
   for (let i = 0; i <= m; i++) {
-    checkIfCoprime(i, m) ? count++ : null;
+    if (checkIfCoprime(i, m)) {
+      count++;
+    }
+    // checkIfCoprime(i, m) ? count++ : null;
   }
   return count;
 }
-// console.log(eulersTotientFn(20));
+console.log(eulersTotientFn(20));
