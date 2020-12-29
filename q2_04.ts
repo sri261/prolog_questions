@@ -4,15 +4,10 @@ import { isPrime } from "./q2_01";
 import { integerFunction } from "./q1_22";
 
 function primeNumRangeList(int1: number, int2: number) {
-  let primeNumberList: Array<number> = [];
-  if (int1 > int2) {
-    return "int 1 should be smaller than int 2";
-  } else {
-    for (let i = int1; i <= int2; i++) {
-      isPrime(i) ? primeNumberList.push(i) : null;
+  return integerFunction(int1, int2).filter((e) => {
+    if (isPrime(e)) {
+      return e;
     }
-  }
-
-  return primeNumberList;
+  });
 }
-console.log(primeNumRangeList(30, 100));
+console.log(primeNumRangeList(10, 40));
