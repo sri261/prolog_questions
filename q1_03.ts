@@ -3,16 +3,11 @@
 let list3: Array<number | string | boolean> = [1, "hsbsd", 4, false];
 
 function kThElement(input: any[], kTh: number) {
-  for (let i = 0; input[i] != undefined; i++) {
-    if (input[i + 1] === undefined) {
-      if (kTh > i) {
-        console.log(
-          "lenght of list is " + i + " enter number smaller than " + i
-        );
-      } else {
-        console.log(input[kTh], "kTh Element");
-      }
-    }
+  if (kTh > input.length) {
+    throw new Error("kTh should be smaller of equal to lenth of array");
+  } else {
+    return input[kTh - 1];
   }
 }
-kThElement(list3, 3); //enter array and kTh elenment parameters
+
+console.log(kThElement(list3, 3));
