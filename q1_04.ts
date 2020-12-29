@@ -3,10 +3,7 @@
 let list4: Array<number | string | boolean> = [1, 2, "hsbsd", 4, true];
 
 function numOfElement(input: any[]) {
-  for (let i = 0; input[i] != undefined; i++) {
-    if (input[i + 1] === undefined) {
-      console.log("Number of Elements of the List are ", i + 1);
-    }
-  }
+  return input.length;
 }
-numOfElement(list4);
+
+console.log(numOfElement(list4));
