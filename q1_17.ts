@@ -3,7 +3,7 @@ import { sliceFromList } from "./q1_18";
 const list17: Array<any> = [0, 1, 2, 3, 4, 5, 6, 7];
 
 export function splitList<T>(input: Array<T>, lengthOfFirstPart: number) {
-  if (lengthOfFirstPart >= input.length) {
+  if (lengthOfFirstPart > input.length) {
     throw new Error(
       "Enter length of first part Smaller than input array length"
     );

@@ -39,4 +39,4 @@ export function consecutiveDuplicates<T>(input: Array<T>) {
   }
   return result;
 }
-// console.log(consecutiveDuplicates(List9));
+console.log(consecutiveDuplicates(List9));

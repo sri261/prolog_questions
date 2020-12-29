@@ -2,14 +2,25 @@
 //Example:
 //?- my_last(X,[a,b,c,d]).
 //X = d
+import { splitList } from "./q1_17";
+let list = [1, 2, "hsbsd", 4, true];
 
-let list: Array<number | string | boolean> = [1, 2, "hsbsd", 4, true];
-
-function lastElement(input: any[]) {
-  for (let i = 0; input[i] != undefined; i++) {
-    if (input[i + 1] === undefined) {
-      console.log(input[i]);
-    }
-  }
+export function head<T>(input: Array<T>) {
+  return input[0];
 }
-lastElement(list);
+export function tail<T>(input: Array<T>) {
+  return splitList(input, 1)[1];
+}
+
+function lastElement<T>(input: Array<T>) {
+  // let temp;
+  // if (tail(input).length != 0) {
+  //   temp = tail(input);
+  //   lastElement(temp);
+  // } else {
+  //   return temp;
+  // }
+  return input[input.length - 1];
+}
+
+console.log(lastElement(list));
