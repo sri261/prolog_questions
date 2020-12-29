@@ -1,8 +1,8 @@
 // 1.03 (*) Find the K'th element of a list.
 
-let list3: Array<number | string | boolean> = [1, "hsbsd", 4, false];
+let list3 = [1, "hsbsd", 4, false];
 
-function kThElement(input: any[], kTh: number) {
+function kThElement<T>(input: Array<T>, kTh: number) {
   if (kTh > input.length) {
     throw new Error("kTh should be smaller of equal to lenth of array");
   } else {

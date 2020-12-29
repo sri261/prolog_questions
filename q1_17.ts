@@ -1,14 +1,12 @@
 // 1.17 (*) Split a list into two parts; the length of the first part is given.
-
 import { sliceFromList } from "./q1_18";
-const list17: Array<number | string | boolean> = [0, 1, 2, 3, 4, 5, 6, 7];
+const list17: Array<any> = [0, 1, 2, 3, 4, 5, 6, 7];
 
-export function splitList(
-  input: Array<number | string | boolean>,
-  lengthOfFirstPart: number
-) {
+export function splitList<T>(input: Array<T>, lengthOfFirstPart: number) {
   if (lengthOfFirstPart >= input.length) {
-    return "Enter length of first part Smaller than input array length";
+    throw new Error(
+      "Enter length of first part Smaller than input array length"
+    );
   } else {
     let firstPart = input.slice(lengthOfFirstPart);
     let secondPart = input.slice(0, lengthOfFirstPart);
@@ -16,10 +14,7 @@ export function splitList(
   }
 }
 //Using splitFromList() from q1_18
-export function splitList2(
-  input: Array<number | string | boolean>,
-  lengthOfFirstPart: number
-) {
+export function splitList2<T>(input: Array<T>, lengthOfFirstPart: number) {
   return sliceFromList(list17, 0, lengthOfFirstPart);
 }
 

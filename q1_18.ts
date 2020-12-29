@@ -1,7 +1,7 @@
 // 1.18 (**) Extract a slice from a list.
 const list18: Array<any> = ["a", 2, 3, "d", true, "df"];
-export function sliceFromList(
-  input: Array<any>,
+export function sliceFromList<T>(
+  input: Array<T>,
   firstIndex: number,
   secondIndex: number
 ) {

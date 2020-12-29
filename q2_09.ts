@@ -15,4 +15,4 @@ function eulersTotientFn(m: number) {
   }
   return count;
 }
-console.log(eulersTotientFn(20));
+// console.log(eulersTotientFn(20));

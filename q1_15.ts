@@ -8,8 +8,11 @@
 
 const list15: Array<any> = ["a", 2, 4, 5, 6, true];
 
-function duplicateElementsNumberofTimes(input: Array<any>, numOfTimes: number) {
-  let duplicateElementsList: Array<any> = [];
+function duplicateElementsNumberofTimes<T>(
+  input: Array<T>,
+  numOfTimes: number
+) {
+  const duplicateElementsList: Array<any> = [];
   input.map((e) => {
     for (let i = 0; i < numOfTimes; i++) {
       duplicateElementsList.push(e);

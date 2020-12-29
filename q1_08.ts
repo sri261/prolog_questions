@@ -6,7 +6,7 @@
 // ?- compress([a,a,a,a,b,c,c,a,a,d,e,e,e,e],X).
 // X = [a,b,c,a,d,e]
 
-const List8: Array<any> = [
+const List8 = [
   "a",
   "a",
   "a",
@@ -23,9 +23,8 @@ const List8: Array<any> = [
   "e",
 ];
 
-function eliminateConsecutiveDuplicates(input: Array<any>) {
+function eliminateConsecutiveDuplicates<T>(input: Array<T>) {
   return input.filter((e, index) => {
-    // return input.indexOf(e) == index ? e : null;
     if (input.indexOf(e) === index) {
       return e;
     }

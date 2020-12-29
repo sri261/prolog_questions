@@ -5,7 +5,7 @@
 // [a,a,a,a,b,c,c,a,a,d,e,e,e,e]
 //  [[a,a,a,a],[b],[c,c],[a,a],[d],[e,e,e,e]]
 
-const List9: Array<any> = [
+const List9 = [
   "a",
   "a",
   "a",
@@ -21,15 +21,15 @@ const List9: Array<any> = [
   "e",
   "e",
 ];
-function consecutiveDuplicates(input: Array<any>) {
-  let result: Array<any> = [];
+export function consecutiveDuplicates<T>(input: Array<T>) {
+  const result: Array<any> = [];
 
   let counter: number = 1;
   for (let i = 0; i < input.length; i++) {
     if (input[i] === input[i + 1]) {
       counter++;
     } else {
-      let temp: Array<any> = [];
+      const temp = [];
       for (let j = 0; j < counter; j++) {
         temp.push(input[i]);
       }
@@ -39,4 +39,4 @@ function consecutiveDuplicates(input: Array<any>) {
   }
   return result;
 }
-console.log(consecutiveDuplicates(List9));
+// console.log(consecutiveDuplicates(List9));

@@ -7,7 +7,7 @@
 
 // Hint: Use the predefined predicates is_list/1 and append/3
 
-const nestedList: Array<any> = [1, ["w", [1, 2]], true, [4, 8]];
+const nestedList = [1, ["w", [1, 2]], true, [4, 8]];
 
 export function flatten(input: Array<any>) {
   return input.reduce((flatArray, currentItem) => {
@@ -16,4 +16,4 @@ export function flatten(input: Array<any>) {
     );
   }, []);
 }
-// console.log(flatten(nestedList));
+console.log(flatten(nestedList));

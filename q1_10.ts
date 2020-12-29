@@ -19,7 +19,7 @@ const List10: Array<any> = [
   "e",
 ];
 
-export function lengthEncoding(input: Array<any>) {
+export function lengthEncoding<T>(input: Array<T>) {
   return consecutiveDuplicates(input).map((e) => {
     return [e.length, e[0]];
   });

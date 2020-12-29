@@ -1,9 +1,9 @@
 // 1.06 (*) Find out whether a list is a palindrome.
 import { reverseList } from "./q1_05";
-const notPalindromeList: Array<any> = [1, 2, 3, 4, 5, 21, 75];
-const palindromeList: Array<any> = [1, 2, 3, 2, 1];
+const notPalindromeList = [1, 2, 3, 4, 5, 21, 75];
+const palindromeList = [1, 2, 3, 2, 1];
 
-export function checkPalindrome(input: Array<any>) {
+export function checkPalindrome<T>(input: Array<T>) {
   // if (reverseList(input) === input) {
   //   return true;
   // } else {

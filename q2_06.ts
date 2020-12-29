@@ -8,9 +8,9 @@ function checkIfEven(input: number) {
 }
 
 function getEvenNumbers(int1: number, int2: number) {
-  let evenNumbers: Array<number> = [];
+  const evenNumbers: Array<number> = [];
   if (int1 >= int2) {
-    return "int 1 should be smaller than int 2";
+    throw new Error("int 1 should be smaller than int 2");
   } else {
     for (let i = int1; i <= int2; i++) {
       checkIfEven(i) ? evenNumbers.push(i) : null;
@@ -20,6 +20,7 @@ function getEvenNumbers(int1: number, int2: number) {
 }
 function goldbachComposition(int1: number, int2: number) {
   let evenNumList: Array<any> = [getEvenNumbers(int1, int2)];
+
   return flatten(evenNumList).map((e) => {
     return getGoldbachPrimeNumbers(e);
   });

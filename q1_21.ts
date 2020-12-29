@@ -2,9 +2,9 @@
 import { splitList } from "./q1_17";
 import { flatten } from "./q1_07";
 
-const list21: Array<number | string | boolean> = [0, 1, 2, 3, 4, 5, 6, 7];
+const list21 = [0, 1, 2, 3, 4, 5, 6, "a"];
 
-function insertEleKth(input: Array<any>, kthpositon: number, ele: any) {
+function insertEleKth<T>(input: Array<T>, kthpositon: number, ele: T) {
   if (kthpositon > input.length) {
     throw new Error("Enter Kthpositon smaller that length of list");
   } else {
@@ -15,4 +15,4 @@ function insertEleKth(input: Array<any>, kthpositon: number, ele: any) {
     return flatten(temp);
   }
 }
-console.log(insertEleKth(list21, 3, false));
+console.log(insertEleKth(list21, 3, 2));
