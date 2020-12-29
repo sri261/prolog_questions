@@ -10,16 +10,20 @@ const List12: Array<any> = [
 ];
 
 function decodeList(input: Array<any>) {
-  // return input.reduce((p, c, i) => {
-  //   return i;
-  // }, []);
-  let tempList: Array<any> = [];
-  for (let i = 0; i < input.length; i++) {
-    for (let j = 0; j < input[i][0]; j++) {
-      tempList.push(input[i][1]);
+  return input.reduce((acc, curr, index) => {
+    for (let i = 0; i <= curr[0]; i++) {
+      acc += curr[1];
     }
-  }
-  return tempList;
+    return acc;
+  }, []);
+
+  // let tempList: Array<any> = [];
+  // for (let i = 0; i < input.length; i++) {
+  //   for (let j = 0; j < input[i][0]; j++) {
+  //     tempList.push(input[i][1]);
+  //   }
+  // }
+  // return tempList;
 }
 
 console.log(decodeList(List12));
