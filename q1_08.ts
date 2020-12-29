@@ -22,6 +22,7 @@ const List8 = [
   "e",
   "e",
 ];
+const numlist = [1, 1, 1, 1, 2, 3, 1, 2, 1, 1, 5];
 
 function eliminateConsecutiveDuplicates<T>(input: Array<T>) {
   return input.filter((e, index) => {
@@ -31,4 +32,4 @@ function eliminateConsecutiveDuplicates<T>(input: Array<T>) {
   });
 }
 
-console.log(eliminateConsecutiveDuplicates(List8));
+console.log(eliminateConsecutiveDuplicates(numlist));
