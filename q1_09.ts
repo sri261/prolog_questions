@@ -20,24 +20,20 @@ const List9 = [
   "e",
   "e",
   "e",
+  "z",
 ];
 
-export function consecutiveDuplicates<T>(input: Array<any>) {
-  const result = [];
-
-  let counter: number = 1;
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === input[i + 1]) {
-      counter++;
+export function consecutiveDuplicates<T>(input: Array<T>) {
+  let temp = [];
+  return input.reduce((acc, curr, index, arr) => {
+    if (curr === arr[index + 1]) {
+      temp.push(curr);
     } else {
-      const temp: Array<T> = [];
-      for (let j = 0; j < counter; j++) {
-        temp.push(input[i]);
-      }
-      result.push(temp);
-      counter = 1;
+      temp.push(curr);
+      acc.push(temp);
+      temp = [];
     }
-  }
-  return result;
+    return acc;
+  }, []);
 }
 console.log(consecutiveDuplicates(List9));
