@@ -1,6 +1,6 @@
 // 1.12 (**) Decode a run-length encoded list.
 import { flatten } from "./q1_07";
-const List12: Array<any> = [
+const List12 = [
   [4, "a"],
   [1, "b"],
   [2, "c"],
@@ -9,21 +9,13 @@ const List12: Array<any> = [
   [4, "e"],
 ];
 
-function decodeList(input: Array<any>) {
-  return input.reduce((acc, curr, index) => {
-    for (let i = 0; i <= curr[0]; i++) {
-      acc += curr[1];
-    }
-    return acc;
-  }, []);
-
-  // let tempList: Array<any> = [];
-  // for (let i = 0; i < input.length; i++) {
-  //   for (let j = 0; j < input[i][0]; j++) {
-  //     tempList.push(input[i][1]);
-  //   }
-  // }
-  // return tempList;
+function decodeList<T>(input: T[]) {
+  return flatten(
+    input.reduce((acc, curr) => {
+      acc.push(Array(curr[0]).fill(curr[1]));
+      return acc;
+    }, [])
+  );
 }
 
 console.log(decodeList(List12));
