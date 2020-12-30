@@ -5,19 +5,20 @@
 
 // What are the results of the goal:
 // ?- dupli(X,3,Y).
+import { flatten } from "./q1_07";
 
-const list15: Array<any> = ["a", 2, 4, 5, 6, true];
+const list15 = ["a", 2, 4, 5, 6, true];
 
-function duplicateElementsNumberofTimes<T>(
-  input: Array<T>,
-  numOfTimes: number
-) {
-  const duplicateElementsList: Array<any> = [];
-  input.map((e) => {
-    for (let i = 0; i < numOfTimes; i++) {
-      duplicateElementsList.push(e);
-    }
-  });
-  return duplicateElementsList;
+function duplicateElementsNumberofTimes<T>(input: T[], numOfTimes: number) {
+  return flatten(
+    input.map((e) => {
+      const duplicateElementsList = [];
+      for (let i = 0; i < numOfTimes; i++) {
+        duplicateElementsList.push(e);
+      }
+      return duplicateElementsList;
+    })
+  );
 }
-console.log(duplicateElementsNumberofTimes(list15, 4));
+
+console.log(duplicateElementsNumberofTimes(list15, 5));
