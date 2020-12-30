@@ -3,16 +3,12 @@
 // that are coprime to m.
 
 import { checkIfCoprime } from "./q2_08";
+import { integerFunction } from "./q1_22";
 
 function eulersTotientFn(m: number) {
-  let count: number = 0;
-
-  for (let i = 0; i <= m; i++) {
-    if (checkIfCoprime(i, m)) {
-      count++;
-    }
-    // checkIfCoprime(i, m) ? count++ : null;
-  }
-  return count;
+  return integerFunction(0, m).reduce(
+    (acc, i) => (checkIfCoprime(i, m) ? acc + 1 : acc),
+    0
+  );
 }
-// console.log(eulersTotientFn(20));
+console.log(eulersTotientFn(20));
