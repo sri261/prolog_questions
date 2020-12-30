@@ -21,15 +21,16 @@ const List9 = [
   "e",
   "e",
 ];
-export function consecutiveDuplicates<T>(input: Array<T>) {
-  const result: Array<any> = [];
+
+export function consecutiveDuplicates<T>(input: Array<any>) {
+  const result = [];
 
   let counter: number = 1;
   for (let i = 0; i < input.length; i++) {
     if (input[i] === input[i + 1]) {
       counter++;
     } else {
-      const temp = [];
+      const temp: Array<T> = [];
       for (let j = 0; j < counter; j++) {
         temp.push(input[i]);
       }
